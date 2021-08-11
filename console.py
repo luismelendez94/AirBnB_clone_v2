@@ -128,18 +128,18 @@ class HBNBCommand(cmd.Cmd):
 
         if args[0] in HBNBCommand.classes:
             new_dict = {}
-            for a in args:#[1:]:
-                #print(a)
+            for a in args:  # [1:]:
+                # print(a)
                 if "=" in a:
                     key_value_list = a.split('=')
                     value = key_value_list[1]
-                    #print(key_value_list)
+                    # print(key_value_list)
                     if value[0] and value[-1] == '"':
                         value = value[1:-1]
-                    #elif type(value) is int:
+                    # elif type(value) is int:
                     #    value = int(value)
                     #    new_dict[key_value_list[0]] = value
-                    #elif type(value) is float:
+                    # elif type(value) is float:
                     #    value = float(value)
                     #    new_dict[key_value_list[0]] = value
                     value = value.replace('_', ' ')
