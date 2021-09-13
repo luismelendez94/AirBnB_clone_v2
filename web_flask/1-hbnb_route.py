@@ -13,6 +13,7 @@ def home():
     """ Display a message """
     return "Hello HBNB!"
 
+
 @app.route("/hbnb", strict_slashes=False)
 def holby():
     """ Display a message """
