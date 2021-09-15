@@ -34,7 +34,7 @@ def python_is_cool(text='is cool'):
     return "Python {}".format(text)
 
 
-@app.route('/number/<n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def is_number(n):
     """ Display message if n is integer """
     if isinstance(n, int):
