@@ -37,8 +37,9 @@ def python_is_cool(text='is cool'):
 @app.route('/number/<n>', strict_slashes=False)
 def is_number(n):
     """ Display message if n is integer """
-    if n.isnumeric():
-        return "{} in a number".format(n)
+    number = int(n)
+    if n.lstrip('-').isnumeric():
+        return "{} is a number".format(n)
 
 
 if __name__ == "__main__":
